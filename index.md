@@ -670,6 +670,10 @@ def find_city_neighbors(city, candidates, radius):
     )
 ```
 
+The [filter](https://docs.python.org/3/library/functions.html#filter) built-in function in Python takes two arguments: a function and an iterable such as a list. It then loops over all elements in the iterable and applies the function to them, returning only those where the result was equivalent to the boolean value `True`. The advantage over our own for-loop + if-statement is two-fold: first, using `filter` results in more compact code, which is more readable; second, it returns an iterator, so you can apply it to very large iterables (think really large lists) without worrying about memory.
+
+The function argument to `filter` can be any function. You can define one yourself using the `def` construct, but in here (and generally when using `filter`) we use a [lambda](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions) function. Think of `lambda` as a short-hand notation to define very simple functions. The general syntax is `lambda <argument>: <result>`. In the case above, our `lambda` takes a city object (`c`) and returns `True`/`False` depending on the result of the comparison `get_distance(city, c) <= radius`. If we want to re-use the `lambda` function, we can always assign it to a variable, as we will see below and call it like a regular function. Neat!
+
 ### Part X: Writing our route planning algorithm!
 
 It seems we have all the pieces necessary to write our `find_route` function. We want to write it generically enough so that if we add other options/arguments in the future, we make the least changes possible. So, here we go!
@@ -725,6 +729,8 @@ def find_route(database, start, finish, km_per_day):
         
     return route
 ```
+
+The code above introduces two features of for-loops: the `break` statement and the `else` clause. A `break` statement does it says it does: it stops the loop. In our case, we use it to avoid iterating over all the cities in the `sorted_neighbors` list after we find one we haven't visited yet. The `else` clause in the for-loop is only valid when there is a `break` statement, and executes only if the for-loop is never stopped. In other words, if we iterate over `sorted_neighbors` and none of the cities triggers the if-statement, the `else` clause runs. It's a neat way of controlling the flow of the program and saving compute cycles.
 
 Now we have to update our main loop:
 
