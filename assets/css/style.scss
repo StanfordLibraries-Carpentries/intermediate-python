@@ -3,6 +3,17 @@
 
 @import "{{ site.theme }}";
 
-.inner {
-	max-width: 1000px;
+header {
+	visibility: hidden;
+	display: none;
+}
+
+footer {
+	visibility: hidden;
+	display: none;
+}
+
+section {
+	float: none;
+	width: 860px;
 }
