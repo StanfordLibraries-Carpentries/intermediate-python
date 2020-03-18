@@ -2,7 +2,7 @@
 
 ### Description
 
-This Python workshop aims to familiarize participants with conventions and features of the language that are not necessarily covered in introductory courses, but that are nonetheless common in daily Python programming. In 3 hours, we will work together and write a Python script that plans a road trip through the USA, from scratch, using our wits, some help from Wikipedia, and a database of US cities (adapted from [here](https://simplemaps.com/data/us-cities)].
+This Python workshop aims to familiarize participants with conventions and features of the language that are not necessarily covered in introductory courses, but that are nonetheless common in daily Python programming. In 3 hours, we will work together and write a Python script that plans a road trip through the USA, from scratch, using our wits, some help from Wikipedia, and a database of US cities (adapted from [here](https://simplemaps.com/data/us-cities)).
 
 ### What to expect from the workshop?
 
