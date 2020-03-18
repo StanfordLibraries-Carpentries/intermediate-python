@@ -30,7 +30,7 @@ We will make use of the terminal and a text editor, not Jupyter notebooks. For a
 
 Google Maps revolutionized how we plan our car trips. It makes it simple to define a route between points A and B and check what is the fastest (or shortest) option. The program we will write today performs a similar task. Given two points, trace a route between them. However, instead of knowing all the roads in the US, we will work with the knowledge of all towns in the US. Our route planner will therefore trace a route that hops from city to city, until we reach our destination. This will be slightly less efficient than Google Maps, but maybe it'll make for more exciting trips!
 
-To begin, we need a database of US cities and their coordinates, which we made available at [this link](https://raw.githubusercontent.com/JoaoRodrigues/sc-teaching/master/intermediate-python/intermediate-python-workshop.tar.gz). We also included a smaller dataset, covering cities and towns in California only. Download the compressed archive to the Downloads folder of your computer and unpack it. It should create a folder called `intermediate-python-workshop` that contains two `.csv` files. In your terminal, move to this folder.
+To begin, we need a database of US cities and their coordinates, which we made available at [this link](https://github.com/StanfordLibraries-Carpentries/intermediate-python/blob/master/intermediate-python-workshop.tar.gz?raw=true). We also included a smaller dataset, covering cities and towns in California only. Download the compressed archive to the Downloads folder of your computer and unpack it. It should create a folder called `intermediate-python-workshop` that contains two `.csv` files. In your terminal, move to this folder.
 
 ```bash
 $ cd ~/Downloads
